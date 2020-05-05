@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "shabnam";
+    src: url("../Assets/Fonts/Shabnam.woff") format("woff"),
+    url("../Assets/Fonts/Shabnam.ttf") format("truetype"),
+    url("../Assets/Fonts/Shabnam.eot") format("embedded-opentype"),
+    url("../Assets/Fonts/Shabnam-Bold.ttf") format("truetype"),
+    url("../Assets/Fonts/Shabnam-Light.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Comfortaa";
+    src: url("../Assets/Fonts/Comfortaa-Bold.ttf") format("truetype"),
+    url("../Assets/Fonts/Comfortaa-Light.ttf") format("truetype"),
+    url("../Assets/Fonts/Comfortaa-Regular.ttf") format("truetype");
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: "shabnam","Tahoma","sans-serif";
+    direction: rtl;
+}
+
+
+
+.icons,
+.menu-icon{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: 1rem;
+    color: #bebebe;
+    transition: 0.4s;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.right-side{
+    flex: 0 0 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Comfortaa","SansSerif";
+    flex: 0 0 60%;
+    position: relative;
+    background-image: linear-gradient(to bottom left , #99f1db , #29bcef );
+    overflow: hidden;
+}
+
+.radar-image{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom left;
+    opacity: 0.1;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.left-side .logo{
+    z-index: 1;
+    position: absolute;
+}
+
+.left-side p{
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.user-pass-form{
+    width: 65%;
+}
+
+.user-pass-title{
+    color: #0093f0;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+.form-header{
+    color: #424242;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.form-subheader{
+    font-size: 0.8rem;
+    color: #9e9e9e;
+    margin-bottom: 40px;
+}
+
+.email,
+.pass,
+.security-code,
+.captcha{
+    position: relative;
+}
+
+.email,
+.pass{
+    margin-bottom: 30px;
+}
+
+.security-code-wrapper{
+    margin-bottom: 40px;
+}
+
+#email-input,
+#pass-input,
+#security-code-input{
+    width: 100%;
+    border: none;
+    padding: 5px 5px 5px 20px;
+    color: #0293ee;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: "shabnam","Tahoma","sans-serif";
+    transition: 0.4s;
+}
+
+.security-code-wrapper{
+    display: flex;
+}
+
+.security-code{
+    width: 60%;
+}
+
+#email-input::placeholder,
+#pass-input::placeholder,
+#security-code-input::placeholder{
+    font-family: "shabnam","Tahoma","sans-serif";
+    color: #bebebe;
+    font-size: 0.8rem;
+}
+
+#email-input:focus,
+#pass-input:focus,
+#security-code-input:focus{
+    color: #0293ee;
+    border-color: #0293ee;
+}
+
+#email-input:focus + .icons,
+#pass-input:focus + .icons,
+#security-code-input:focus + a .icons{
+    color: #0293ee;
+}
+
+.remember-check{
+    display: none;
+}
+
+.captcha{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.captcha img {
+    width: 70%;
+}
+
+.submit-button{
+    width: 100%;
+    background-color: #0093ed;
+    font-family: "shabnam","Tahoma","sans-serif";
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.submit{
+    margin-bottom: 20px;
+}
+
+.remember label{
+    cursor: pointer;
+    color: #bdbdbd;
+    font-size: 0.9rem;
+}
+
+.fa-check-square{
+    display: none;
+}
+
+.remember-check:checked ~ .fa-check-square{
+    display: inline-block;
+}
+
+.remember-check:checked ~ .fa-square{
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    main{
+        flex-direction: column;
+    }
+    .right-side{
+        padding: 25px 0;
+    }
+}
+
+.radar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: 100vh;
+    height: 100vh;
+}
+
+.radar .ring {
+    background-color: #b4f8f8;
+    border: .3px solid #b0f5f5;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    -webkit-transform: translate(-50% , -50%);
+    transform: translate(-50% ,-50%);
+    -webkit-animation: ringout 8s linear infinite;
+    animation: ringout 8s linear infinite;
+    opacity: 0.1;
+}
+
+.radar .ring2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.radar .ring3 {
+    -webkit-animation-delay: 1.75s;
+    animation-delay: 1.75s;
+}
+.radar .ring4 {
+     -webkit-animation-delay: 2.5s;
+     animation-delay: 2.5s;
+ }
+.radar .ring5 {
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+.radar .ring6 {
+    -webkit-animation-delay: 4.5s;
+    animation-delay: 4.5s;
+}
+.radar .ring7 {
+    -webkit-animation-delay: 5.5s;
+    animation-delay: 4.5s;
+}
+.radar .ring8 {
+    -webkit-animation-delay: 6.5s;
+    animation-delay: 6.5s;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes ringout {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    75%{
+        opacity: 0.05;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+@keyframes ringout {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    75%{
+        opacity: 0.05;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
