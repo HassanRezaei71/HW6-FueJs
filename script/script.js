@@ -206,7 +206,92 @@ document.getElementById('root').append(
                                 ]
                             )
                         ])
-                ])
+                ]),
+                FueJS.createElement(
+                    "div",
+                    {
+                        className: "left-side",
+                    },
+                    [
+                        FueJS.createElement(
+                            "div",
+                            {
+                                className: "radar",
+                            },
+                            [
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring1",
+                                    }
+                                ),
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring2",
+                                    }
+                                ),
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring3",
+                                    }
+                                ),
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring4",
+                                    }
+                                ),
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring5",
+                                    }
+                                ),
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring6",
+                                    }
+                                ),
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring7",
+                                    }
+                                ),
+                                FueJS.createElement(
+                                    'div',
+                                    {
+                                        className: "ring ring8",
+                                    }
+                                )
+                            ]
+                        ),
+                        FueJS.createElement(
+                            'img',
+                            {
+                                src: "Assets/PNG/radar-angle.png",
+                                alt: "radar",
+                                class: "radar-image"
+                            }
+                        ),
+                        FueJS.createElement(
+                            'img',
+                            {
+                                src: "Assets/PNG/Logo.png",
+                                alt: "Logo",
+                                class: "logo"
+                            }
+                        ),
+                        FueJS.createElement(
+                            'p',
+                            {},
+                            FueJS.createTextNode("Multi Anti-Virus & Cybersecurity")
+                        )
+                    ]
+                )
         ]
     ),
 )
