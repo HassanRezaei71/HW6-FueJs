@@ -1,0 +1,212 @@
+document.getElementById('root').append(
+    FueJS.createElement(
+        "main",
+        {},
+        [
+            FueJS.createElement(
+                "div",
+                {
+                    className: "right-side",
+                },
+                [
+                    FueJS.createElement(
+                        "div",
+                        {
+                            className: "user-pass-form",
+                        },
+                        [
+                            FueJS.createElement(
+                                "p",
+                                {
+                                    className: "user-pass-title"
+                                },
+                                FueJS.createTextNode("ورود")
+                            ),
+                            FueJS.createElement(
+                                "h1",
+                                {
+                                    className: "form-header",
+                                },
+                                FueJS.createTextNode("ورود به حساب کاربری")
+                            ),
+                            FueJS.createElement(
+                                "h3",
+                                {
+                                    className: "form-subheader",
+                                },
+                                FueJS.createTextNode("جهت ورود به برنامه نام کاربری و رمز عبور خود را وارد نمایید")
+                            ),
+                            FueJS.createElement(
+                                "form",
+                                {
+                                    action: "#",
+                                    method: "post",
+                                },
+                                FueJS.createElement(
+                                    "div",
+                                    {
+                                        className: "email",
+                                    },
+                                    [
+                                        FueJS.createElement(
+                                            "input",
+                                            {
+                                                type: "email",
+                                                name: "email-input",
+                                                id: "email-input",
+                                                placeholder: "نام کاربری"
+                                            }
+                                        ),
+                                        FueJS.createElement(
+                                            "i",
+                                            {
+                                                className: "fas fa-user icons",
+                                            }
+                                        )
+                                    ]
+                                )
+                            ),
+                            FueJS.createElement(
+                                "div",
+                                {
+                                    className: "pass",
+                                },
+                                [
+                                    FueJS.createElement(
+                                        "input",
+                                        {
+                                            type: "password",
+                                            name: "pass-input",
+                                            id: "pass-input",
+                                            placeholder: "رمز عبور"
+                                        }
+                                        ),
+                                        FueJS.createElement(
+                                            "i",
+                                            {
+                                                className: "fas fa-th icons",
+                                            }
+                                        )
+                                ]
+                            ),
+                            FueJS.createElement(
+                                "div",
+                                {
+                                    className: "security-code-wrapper",
+                                },
+                                [
+                                    FueJS.createElement(
+                                        "div",
+                                        {
+                                            className: "security-code"
+                                        },
+                                        [
+                                            FueJS.createElement(
+                                                "input",
+                                                {
+                                                    type: "text",
+                                                    name: "security-code-input",
+                                                    id: "security-code-input",
+                                                    placeholder: "کد امنیتی"
+                                                }
+                                            )
+                                        ]
+                                    ),
+                                    FueJS.createElement(
+                                        "captcha",
+                                        {
+                                            className: "captcha",
+                                        },
+                                        [
+                                            FueJS.createElement(
+                                                "img",
+                                                {
+                                                    src: "Assets/PNG/captcha.gif",
+                                                    alt: "captcha"
+                                                }
+                                            ),
+                                            FueJS.createElement(
+                                                "div",
+                                                {},
+                                                [
+                                                    FueJS.createElement(
+                                                        "a",
+                                                        {
+                                                            href: "#",
+                                                        },
+                                                        [
+                                                            FueJS.createElement(
+                                                                "i",
+                                                                {
+                                                                    className: "far fa-sync-alt icons",
+                                                                }
+                                                            )
+                                                        ]
+                                                    )
+                                                ]
+                                            )
+                                        ]
+                                    )
+                                ]
+                            ),
+                            FueJS.createElement(
+                                "div",
+                                {
+                                    className: "submit",
+                                },
+                                [
+                                    FueJS.createElement(
+                                        "button",
+                                        {
+                                            type: "submit", 
+                                            class: "submit-button",
+                                        },
+                                        FueJS.createTextNode("ورود")
+                                    )
+                                ]
+                            ),
+                            FueJS.createElement(
+                                "div",
+                                {
+                                    className: "remember",
+                                },
+                                [
+                                    FueJS.createElement(
+                                        "label",
+                                        {},
+                                        [
+                                            FueJS.createElement(
+                                                "input",
+                                                {
+                                                    type: "checkbox",
+                                                    class: "remember-check",
+                                                },
+                                            ),
+                                            FueJS.createElement(
+                                                "i",
+                                                {
+                                                    className: "fal fa-square"
+                                                }
+                                            ),
+                                            FueJS.createElement(
+                                                "i",
+                                                {
+                                                    className: "fas fa-check-square"
+                                                }
+                                            ),
+                                            FueJS.createElement(
+                                                "span",
+                                                {
+                                                    className: "remember-text",
+                                                },
+                                                FueJS.createTextNode("مرا به خاطر بسپار")
+                                            )
+                                        ]
+                                    )
+                                ]
+                            )
+                        ])
+                ])
+        ]
+    ),
+)

@@ -225,6 +225,10 @@ main{
     }
 }
 
+.remember-text{
+    margin-right: 5px;
+}
+
 .radar{
     position: absolute;
     top: 50%;
